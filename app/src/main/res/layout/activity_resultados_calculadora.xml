@@ -16,8 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="@string/tituloResultadosCalculadora"
-        android:textSize="25dp"
-        />
+        android:textSize="25dp" />
 
     <TextView
         android:id="@+id/resultadosCalculadoraValorEntradaPaga"
