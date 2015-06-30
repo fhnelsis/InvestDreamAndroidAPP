@@ -14,7 +14,7 @@ import br.com.investdream.investdreamandroidapp.R;
 
 public class Calculadora extends Activity implements View.OnClickListener {
 
-    private EditText edtValorCarro;
+    private EditText edtValorBem;
     private EditText edtValorEntrada;
     private Button btCalcular;
 
@@ -23,43 +23,41 @@ public class Calculadora extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
 
-        btCalcular = (Button) findViewById(R.id.btCalcular);
+        inicializarElementos();
 
-        btCalcular.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-            }
-        });
+        btCalcular.setOnClickListener(this);
+    }
+
+    private void inicializarElementos() {
+        btCalcular = (Button) findViewById(R.id.btCalcular);
+        edtValorBem = (EditText) findViewById(R.id.fieldValorDoBem);
+        edtValorEntrada = (EditText) findViewById(R.id.fieldValorDaEntrada);
     }
 
     public void onClick(View v) {
-        double valorCarro = Double.parseDouble(edtValorCarro.getText().toString());
-        double valorEntrada = Double.parseDouble(edtValorEntrada.getText().toString());
+        Double valorCarro = Double.parseDouble(edtValorBem.getText().toString());
+        Double valorEntrada = Double.parseDouble(edtValorEntrada.getText().toString());
 
-        double up = (valorCarro * 1.25);
-        double valorTitulo = (up * 2);
-        double valorParcela = (up / 60);
-        double valorEntradaPaga = valorEntrada;
-        double saldoPagar = (valorTitulo - valorEntradaPaga);
-        double valorParcelaFinal = (saldoPagar / 90);
+        Double valorEntradaPaga = valorEntrada;
+        Double up = (valorCarro * 1.25);
+        Double valorTitulo = (up * 2);
+        Double valorParcela = (up / 60);
+        Double saldoPagar = (valorTitulo - valorEntradaPaga);
+        Double valorParcelaFinal = (saldoPagar / 90);
         //int mesesResgate;
-        //Todo Verificar como os meses para resgate entram no cálculo.
+        //TODO Verificar como os meses para resgate entram no cálculo.
 
-        Intent intent = new Intent(this, ResultadosCalculadora.class);
-        intent.putExtra("up", up);
-        intent.putExtra("valorTitulo", valorTitulo);
-        intent.putExtra("valorParcela", valorParcela);
-        intent.putExtra("valorEntradaPaga", valorEntradaPaga);
-        intent.putExtra("saldoPagar", saldoPagar);
-        intent.putExtra("valorParcelaFinal", valorParcelaFinal);
+        Intent intent = new Intent(Calculadora.this, ResultadosCalculadora.class);
 
-
-        setContentView(R.layout.activity_resultados_calculadora);
+        intent.putExtra("intentValorEntradaPaga", valorEntradaPaga);
+        intent.putExtra("intentUp", up);
+        intent.putExtra("intentValorTitulo", valorTitulo);
+        intent.putExtra("intentValorParcela", valorParcela);
+        intent.putExtra("intentSaldoPagar", saldoPagar);
+        intent.putExtra("intentValorParcelaFinal", valorParcelaFinal);
+        startActivity(intent);
     }
 
-    @Override
-    public void onBackPressed() {
-        setContentView(R.layout.activity_main);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

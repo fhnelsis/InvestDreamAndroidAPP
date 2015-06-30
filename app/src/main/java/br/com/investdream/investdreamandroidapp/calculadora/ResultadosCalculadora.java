@@ -1,10 +1,11 @@
 package br.com.investdream.investdreamandroidapp.calculadora;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import br.com.investdream.investdreamandroidapp.R;
 
@@ -16,37 +17,15 @@ public class ResultadosCalculadora extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultados_calculadora);
 
-        Bundle extras = getIntent().getExtras();
+        Intent intent = getIntent();
 
-        Double up = null;
-        if (extras != null) {
-            up = extras.getDouble("up");
-        }
+        Double valorEntradaPaga = intent.getDoubleExtra("intentValorEntradaPaga", 0D);
+        Double up = intent.getDoubleExtra("intentUp", 0D);
+        Double valorTitulo = intent.getDoubleExtra("intentValorTitulo", 0D);
+        Double valorParcela = intent.getDoubleExtra("intentValorParcela", 0D);
+        Double saldoPagar = intent.getDoubleExtra("intentSaldoPagar", 0D);
+        Double valorParcelaFinal = intent.getDoubleExtra("intentValorParcelaFinal", 0D);
 
-        Double valorTitulo = null;
-        if (extras != null) {
-            valorTitulo = extras.getDouble("valorTitulo");
-        }
-
-        Double valorParcela = null;
-        if (extras != null) {
-            valorParcela = extras.getDouble("valorParcela");
-        }
-
-        Double valorEntradaPaga = null;
-        if (extras != null) {
-            valorEntradaPaga = extras.getDouble("valorEntradaPaga");
-        }
-
-        Double saldoPagar = null;
-        if (extras != null) {
-            saldoPagar = extras.getDouble("saldoPagar");
-        }
-
-        Double valorParcelaFinal = null;
-        if (extras != null) {
-            valorParcelaFinal = extras.getDouble("valorParcelaFinal");
-        }
 //TODO Jogar valores que passei de uma activity para a outra nos campos da ResultadosCalculadora.java.
     }
 

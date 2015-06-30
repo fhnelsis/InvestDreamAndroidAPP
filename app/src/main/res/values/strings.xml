@@ -11,7 +11,7 @@
 
 
     <string name="title_activity_resultados_calculadora">ResultadosCalculadora</string>
-    <string name="tituloResultadosCalculadora">Resultados da Calculadora de Contratos</string>
+    <string name="tituloResultadosCalculadora">Resultados do Cálculo</string>
 
 
     <string name="resultadosCalculadoraCampoValorEntradaPaga">Valor da Entrada</string>

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/tituloCalculadora"
-        android:textSize="40dp" />
+        android:textSize="25dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,13 +33,13 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:text="Valor do Bem"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/fieldValorDoBem"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:layout_marginTop="10dp"/>
 
 
         <TextView
@@ -50,21 +50,25 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:text="Valor da Entrada"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/fieldValorDaEntrada"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:layout_marginTop="10dp"/>
 
         <Button
             android:id="@+id/btCalcular"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:text="Calcular" />
+            android:text="Calcular"
+            android:onClick="onClick"
+            android:textAlignment="center"
+            android:clickable="true"
+            android:enabled="true"
+            android:textStyle="bold"
+            android:layout_marginTop="100dp"/>
 
     </LinearLayout>
 </RelativeLayout>
