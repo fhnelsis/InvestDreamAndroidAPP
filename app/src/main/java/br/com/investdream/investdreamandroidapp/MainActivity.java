@@ -62,5 +62,6 @@ public class MainActivity extends Activity {
 
     public void exibirRegistroDeInteressados() {
         setContentView(R.layout.activity_registro_de_interessados);
+
     }
 }

@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -13,8 +13,98 @@
         style="@style/Base.TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:text="@string/tituloResultadosCalculadora"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraValorEntradaPaga"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/resultadosCalculadoraCampoValorEntradaPaga"
+        android:textSize="30dp"
+        android:layout_marginTop="70dp" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraUp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/resultadosCalculadoraCampoUp"
+        android:textSize="30dp"
+        android:layout_marginTop="120dp" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraValorTitulo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/resultadosCalculadoraCampoValorTitulo"
+        android:textSize="30dp"
+        android:layout_marginTop="170dp" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraValorParcela"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/resultadosCalculadoraCampoValorParcela"
+        android:textSize="30dp"
+        android:layout_marginTop="220dp" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraSaldoPagar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/resultadosCalculadoraCampoSaldoPagar"
+        android:textSize="30dp"
+        android:layout_marginTop="270dp" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraParcelaFinal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/resultadosCalculadoraCampoValorParcelaFinal"
+        android:textSize="30dp"
+        android:layout_marginTop="320dp" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraValueValorEntradaPaga"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="R$ 100.000,00"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/resultadosCalculadoraValorEntradaPaga"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraValueUp"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="R$ 100.000,00"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/resultadosCalculadoraUp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraValueValorDoTitulo"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="R$ 100.000,00"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/resultadosCalculadoraValorTitulo"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraValueValorParcela"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="R$ 100.000,00"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/resultadosCalculadoraValorParcela"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>

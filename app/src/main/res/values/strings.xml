@@ -10,15 +10,23 @@
     <string name="tituloCalculadora">Calculadora de Contratos</string>
 
 
-
     <string name="title_activity_resultados_calculadora">ResultadosCalculadora</string>
     <string name="tituloResultadosCalculadora">Resultados da Calculadora de Contratos</string>
+
+
+    <string name="resultadosCalculadoraCampoValorEntradaPaga">Valor da Entrada</string>
     <string name="resultadosCalculadoraCampoUp">Upgrade</string>
     <string name="resultadosCalculadoraCampoValorTitulo">Valor do Título</string>
     <string name="resultadosCalculadoraCampoValorParcela">Valor da Parcela</string>
-    <string name="resultadosCalculadoraCampoValorEntradaPaga">Valor da Entrada</string>
     <string name="resultadosCalculadoraCampoSaldoPagar">Saldo a Pagar</string>
     <string name="resultadosCalculadoraCampoValorParcelaFinal">Valor da Parcela Final</string>
+
+    <string name="resultadosCalculadoraValueValorEntradaPaga">Valor da Entrada</string>
+    <string name="resultadosCalculadoraValueUp">Upgrade</string>
+    <string name="resultadosCalculadoraValueValorTitulo">Valor do Título</string>
+    <string name="resultadosCalculadoraValueValorParcela">Valor da Parcela</string>
+    <string name="resultadosCalculadoraValueSaldoPagar">Saldo a Pagar</string>
+    <string name="resultadosCalculadoraValueValorParcelaFinal">Valor da Parcela Final</string>
 
     <string name="title_activity_registro_de_interessados">RegistroDeInteressados</string>
 
