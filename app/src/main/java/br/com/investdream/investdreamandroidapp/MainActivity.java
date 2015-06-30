@@ -1,17 +1,37 @@
 package br.com.investdream.investdreamandroidapp;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
+
+    private Button btRegistroDeInteressados;
+    private Button btCalculadora;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btCalculadora = (Button) findViewById(R.id.btCalculadora);
+        btRegistroDeInteressados = (Button) findViewById(R.id.btRegistroDeInteressados);
+
+        btCalculadora.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                exibirCalculadora();
+            }
+        });
+
+        btRegistroDeInteressados.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                exibirRegistroDeInteressados();
+            }
+        });
     }
 
     @Override
@@ -34,5 +54,13 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void exibirCalculadora() {
+        setContentView(R.layout.activity_calculadora);
+    }
+
+    public void exibirRegistroDeInteressados() {
+        setContentView(R.layout.activity_registro_de_interessados);
     }
 }

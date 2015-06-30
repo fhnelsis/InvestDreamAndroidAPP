@@ -9,7 +9,48 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
+        style="@style/Base.TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Menu Invest Dream"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/btCalculadora"
+        android:layout_width="450dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="93dp"
+        android:text="Calculadora de Contratos" />
+
+    <Button
+        android:id="@+id/btRegistroDeInteressados"
+        android:layout_width="450dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/btCalculadora"
+        android:layout_alignStart="@+id/btCalculadora"
+        android:layout_below="@+id/btCalculadora"
+        android:text="Registro de Interessados" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:src="@drawable/logosplash" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="450dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/btRegistroDeInteressados"
+        android:layout_alignStart="@+id/btRegistroDeInteressados"
+        android:layout_centerVertical="true"
+        android:text="NULL" />
 
 </RelativeLayout>
