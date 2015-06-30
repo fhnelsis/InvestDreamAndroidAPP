@@ -1,10 +1,12 @@
-package br.com.investdream.investdreamandroidapp;
+package br.com.investdream.investdreamandroidapp.registroDeInteressados;
 
 import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import br.com.investdream.investdreamandroidapp.R;
 
 
 public class RegistroDeInteressados extends Activity {

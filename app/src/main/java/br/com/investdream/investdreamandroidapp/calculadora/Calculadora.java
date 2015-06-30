@@ -1,4 +1,4 @@
-package br.com.investdream.investdreamandroidapp;
+package br.com.investdream.investdreamandroidapp.calculadora;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import br.com.investdream.investdreamandroidapp.R;
 
 
 public class Calculadora extends Activity implements View.OnClickListener {

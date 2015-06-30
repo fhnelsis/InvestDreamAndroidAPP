@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="br.com.investdream.investdreamandroidapp.Calculadora">
+    tools:context="br.com.investdream.investdreamandroidapp.calculadora.Calculadora">
 
     <TextView
         android:id="@+id/title_calculadora"
@@ -26,17 +26,17 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/labelValorDoCarro"
+            android:id="@+id/labelValorDoBem"
             style="@style/Base.TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            android:text="Valor do Carro"
+            android:text="Valor do Bem"
             android:textSize="30dp" />
 
         <EditText
-            android:id="@+id/fieldValorDoCarro"
+            android:id="@+id/fieldValorDoBem"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
