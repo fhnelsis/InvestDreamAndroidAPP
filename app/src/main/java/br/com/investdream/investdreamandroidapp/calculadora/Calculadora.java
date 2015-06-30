@@ -36,7 +36,7 @@ public class Calculadora extends Activity implements View.OnClickListener {
         double valorEntrada = Double.parseDouble(edtValorEntrada.getText().toString());
 
         double up = (valorCarro * 1.25);
-        double valorTitulo  = (up * 2);
+        double valorTitulo = (up * 2);
         double valorParcela = (up / 60);
         double valorEntradaPaga = valorEntrada;
         double saldoPagar = (valorTitulo - valorEntradaPaga);
