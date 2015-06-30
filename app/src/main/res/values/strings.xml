@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Invest Dream Android APP</string>
+    <string name="app_name">Invest Dream</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_about">Sobre</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
 </resources>
