@@ -11,14 +11,13 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 
     private Button btRegistroDeInteressados;
-    private Button btCalculadora;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btCalculadora = (Button) findViewById(R.id.btCalculadora);
+        Button btCalculadora = (Button) findViewById(R.id.btCalculadora);
         btRegistroDeInteressados = (Button) findViewById(R.id.btRegistroDeInteressados);
 
         btCalculadora.setOnClickListener(new View.OnClickListener() {
@@ -52,11 +51,11 @@ public class MainActivity extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     public void exibirCalculadora() {
+
         setContentView(R.layout.activity_calculadora);
     }
 

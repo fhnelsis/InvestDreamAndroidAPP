@@ -39,7 +39,11 @@
             android:id="@+id/fieldValorDoBem"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:digits="0123456789"
+            android:hint="Insira o valor somente com pontuação de centavos."
+            android:inputType="number"
+            android:maxLength="9" />
 
 
         <TextView
@@ -56,19 +60,24 @@
             android:id="@+id/fieldValorDaEntrada"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:digits="0123456789"
+            android:hint="Insira o valor somente com pontuação de centavos."
+            android:inputType="number"
+            android:maxLength="9" />
 
         <Button
             android:id="@+id/btCalcular"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:text="Calcular"
-            android:onClick="onClick"
-            android:textAlignment="center"
+            android:layout_marginTop="70dp"
             android:clickable="true"
             android:enabled="true"
+            android:text="Calcular"
+            android:textAlignment="center"
             android:textStyle="bold"
-            android:layout_marginTop="100dp"/>
+            android:nestedScrollingEnabled="false"
+            android:onClick="onClick" />
 
     </LinearLayout>
 </RelativeLayout>
