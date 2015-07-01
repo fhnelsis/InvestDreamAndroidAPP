@@ -40,7 +40,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:digits="0123456789"
+            android:digits="0123456789,"
             android:hint="Insira o valor somente com pontuação de centavos."
             android:inputType="number"
             android:maxLength="9" />
@@ -61,7 +61,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:digits="0123456789"
+            android:digits="0123456789,"
             android:hint="Insira o valor somente com pontuação de centavos."
             android:inputType="number"
             android:maxLength="9" />
@@ -74,7 +74,6 @@
             android:clickable="true"
             android:enabled="true"
             android:nestedScrollingEnabled="false"
-            android:onClick="onClick"
             android:text="Calcular"
             android:textAlignment="center"
             android:textStyle="bold" />

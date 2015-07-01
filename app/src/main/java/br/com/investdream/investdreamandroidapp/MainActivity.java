@@ -10,8 +10,6 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-    private Button btRegistroDeInteressados;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +53,6 @@ public class MainActivity extends Activity {
     }
 
     public void exibirCalculadora() {
-
         setContentView(R.layout.activity_calculadora);
     }
 

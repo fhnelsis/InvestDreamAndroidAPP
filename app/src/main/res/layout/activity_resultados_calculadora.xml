@@ -147,6 +147,6 @@
         android:layout_alignRight="@+id/resultadosCalculadoraValueParcelaFinal"
         android:layout_alignStart="@+id/resultadosCalculadoraValueParcelaFinal"
         android:layout_alignTop="@+id/btNovoCalculo"
-        android:src="@drawable/logosplash1" />
+        android:src="@drawable/logosplash" />
 
 </RelativeLayout>
