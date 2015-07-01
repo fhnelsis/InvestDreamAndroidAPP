@@ -26,6 +26,7 @@ public class Calculadora extends Activity {
         Button btCalcular = (Button) findViewById(R.id.btCalcular);
 
         btCalcular.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), ResultadosCalculadora.class);
@@ -34,18 +35,6 @@ public class Calculadora extends Activity {
                 startActivity(intent);
             }
         });
-
-//        btCalcular.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//
-//                Intent intent = new Intent(getBaseContext(), ResultadosCalculadora.class);
-//                String name = "Teste";
-//                intent.putExtra("name", name);
-//                startActivity(intent);
-//
-//            }
-//        });
-
     }
 
     @Override
