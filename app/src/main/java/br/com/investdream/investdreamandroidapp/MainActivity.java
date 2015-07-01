@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Button btCalculadora = (Button) findViewById(R.id.btCalculadora);
-        btRegistroDeInteressados = (Button) findViewById(R.id.btRegistroDeInteressados);
+        Button btRegistroDeInteressados = (Button) findViewById(R.id.btRegistroDeInteressados);
 
         btCalculadora.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
