@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import br.com.investdream.investdreamandroidapp.R;
 
 
@@ -19,17 +21,46 @@ public class ResultadosCalculadora extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultados_calculadora);
 
-        Bundle bundle = getIntent().getExtras();
+        try {
+            Bundle bundle = getIntent().getExtras();
 
-        Double valorDoBem = bundle.getDouble("valorEntragaPaga");
-        Double valorEntradaPaga = bundle.getDouble("valorDoBem");
+            Double valorDoBem = bundle.getDouble("valorEntragaPaga");
+            Double valorEntradaPaga = bundle.getDouble("valorDoBem");
 
-        Double upgrade =  0.0;
-        Double valorDoTitulo = 0.0;
-        Double valorDaParcela = 0.0;
-        Double saldoAPagar = 0.0;
-        Double valorDaParcelaFinal = 0.0;
+            Double upgrade = (valorDoBem * 1.25);
+            Double valorDoTitulo = (upgrade * 2);
+            Double valorDaParcela = (upgrade / 60);
+            Double saldoAPagar = (valorDoTitulo - valorEntradaPaga);
+            Double valorDaParcelaFinal = (saldoAPagar / 90);
 
+            String StringValorEntradaPaga = valorEntradaPaga.toString();
+            String StringUpgrade = upgrade.toString();
+            String StringValorDoTitulo = valorDoTitulo.toString();
+            String StringValorDaParcela = valorDaParcela.toString();
+            String StringSaldoAPagar = saldoAPagar.toString();
+            String StringValorDaParcelaFinal = valorDaParcelaFinal.toString();
+
+            TextView txtViewValorEntradaPaga = (TextView) findViewById(R.id.resultadosCalculadoraValueValorEntradaPaga);
+            txtViewValorEntradaPaga.setText(StringValorEntradaPaga);
+
+            TextView txtViewUpgrade = (TextView) findViewById(R.id.resultadosCalculadoraValueUp);
+            txtViewUpgrade.setText(StringUpgrade);
+
+            TextView txtViewValorDoTitulo = (TextView) findViewById(R.id.resultadosCalculadoraValueValorDoTitulo);
+            txtViewValorDoTitulo.setText(StringValorDoTitulo);
+
+            TextView txtViewValorDaParcela = (TextView) findViewById(R.id.resultadosCalculadoraValueValorParcela);
+            txtViewValorDaParcela.setText(StringValorDaParcela);
+
+            TextView txtViewSaldoAPagar = (TextView) findViewById(R.id.resultadosCalculadoraValueSaldoPagar);
+            txtViewSaldoAPagar.setText(StringSaldoAPagar);
+
+            TextView txtViewValorDaParcelaFinal = (TextView) findViewById(R.id.resultadosCalculadoraValueParcelaFinal);
+            txtViewValorDaParcelaFinal.setText(StringValorDaParcelaFinal);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 //        Double valorEntradaPaga = getIntent().getDoubleExtra("intentValorEntradaPaga", defaultValue);
 //        Double up = getIntent().getDoubleExtra("intentUp", defaultValue);
 //        Double valorTitulo = getIntent().getDoubleExtra("intentValorTitulo", defaultValue);
