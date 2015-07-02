@@ -1,4 +1,4 @@
-package br.com.investdream.investdreamandroidapp.calculadora;
+package br.com.investdream.investdreamandroidapp;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,19 +12,30 @@ import br.com.investdream.investdreamandroidapp.R;
 
 public class ResultadosCalculadora extends Activity {
 
+    Double defaultValue = 0.0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultados_calculadora);
 
-        Intent intent = getIntent();
+        Bundle bundle = getIntent().getExtras();
 
-        Double valorEntradaPaga = intent.getDoubleExtra("intentValorEntradaPaga", 0D);
-        Double up = intent.getDoubleExtra("intentUp", 0D);
-        Double valorTitulo = intent.getDoubleExtra("intentValorTitulo", 0D);
-        Double valorParcela = intent.getDoubleExtra("intentValorParcela", 0D);
-        Double saldoPagar = intent.getDoubleExtra("intentSaldoPagar", 0D);
-        Double valorParcelaFinal = intent.getDoubleExtra("intentValorParcelaFinal", 0D);
+        Double valorDoBem = bundle.getDouble("valorEntragaPaga");
+        Double valorEntradaPaga = bundle.getDouble("valorDoBem");
+
+        Double upgrade =  0.0;
+        Double valorDoTitulo = 0.0;
+        Double valorDaParcela = 0.0;
+        Double saldoAPagar = 0.0;
+        Double valorDaParcelaFinal = 0.0;
+
+//        Double valorEntradaPaga = getIntent().getDoubleExtra("intentValorEntradaPaga", defaultValue);
+//        Double up = getIntent().getDoubleExtra("intentUp", defaultValue);
+//        Double valorTitulo = getIntent().getDoubleExtra("intentValorTitulo", defaultValue);
+//        Double valorParcela = getIntent().getDoubleExtra("intentValorParcela", defaultValue);
+//        Double saldoPagar = getIntent().getDoubleExtra("intentSaldoPagar", defaultValue);
+//        Double valorParcelaFinal = getIntent().getDoubleExtra("intentValorParcelaFinal", defaultValue);
 
 //TODO Jogar valores que passei de uma activity para a outra nos campos da ResultadosCalculadora.java.
     }

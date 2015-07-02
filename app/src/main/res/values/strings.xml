@@ -26,5 +26,7 @@
     <string name="resultadosCalculadoraValueSaldoPagar">Saldo a Pagar</string>
     <string name="resultadosCalculadoraValueValorParcelaFinal">Valor da Parcela Final</string>
 
+    <string name="hello_world">Hello world!</string>
+
 
 </resources>

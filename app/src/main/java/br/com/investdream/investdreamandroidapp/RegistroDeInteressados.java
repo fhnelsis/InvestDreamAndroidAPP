@@ -1,4 +1,4 @@
-package br.com.investdream.investdreamandroidapp.registroDeInteressados;
+package br.com.investdream.investdreamandroidapp;
 
 import android.app.Activity;
 import android.os.Bundle;

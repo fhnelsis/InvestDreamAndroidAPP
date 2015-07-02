@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="br.com.investdream.investdreamandroidapp.calculadora.ResultadosCalculadora">
+    tools:context="br.com.investdream.investdreamandroidapp.ResultadosCalculadora">
 
     <TextView
         android:id="@+id/title_calculadora"
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/resultadosCalculadoraValorEntradaPaga"
         android:layout_marginLeft="170dp"
-        android:text="R$ 20.000,00"
+        android:text=""
         android:textSize="20dp" />
 
     <TextView
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/resultadosCalculadoraUp"
         android:layout_marginLeft="170dp"
-        android:text="R$ 59.362,50"
+        android:text=""
         android:textSize="20dp" />
 
     <TextView
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/resultadosCalculadoraValorTitulo"
         android:layout_marginLeft="170dp"
-        android:text="R$ 118.725,00"
+        android:text=""
         android:textSize="20dp" />
 
     <TextView
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/resultadosCalculadoraValorParcela"
         android:layout_marginLeft="170dp"
-        android:text="R$ 898,00"
+        android:text=""
         android:textSize="20dp" />
 
     <TextView
@@ -113,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/resultadosCalculadoraSaldoPagar"
         android:layout_marginLeft="170dp"
-        android:text="R$ 97.948,00"
+        android:text=""
         android:textSize="20dp" />
 
     <TextView
@@ -123,7 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/resultadosCalculadoraParcelaFinal"
         android:layout_marginLeft="170dp"
-        android:text="R$ 1.088,31"
+        android:text=""
         android:textSize="20dp" />
 
     <Button

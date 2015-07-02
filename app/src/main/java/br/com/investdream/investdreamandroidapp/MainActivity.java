@@ -1,11 +1,13 @@
 package br.com.investdream.investdreamandroidapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 public class MainActivity extends Activity {
@@ -58,5 +60,21 @@ public class MainActivity extends Activity {
 
     public void exibirRegistroDeInteressados() {
         setContentView(R.layout.activity_registro_de_interessados);
+    }
+
+    public void calcular(View view) {
+        Intent intent = new Intent(getBaseContext(), ResultadosCalculadora.class);
+
+        EditText valordoBem = (EditText) findViewById(R.id.fieldValorDoBem);
+        EditText valordaEntrada = (EditText) findViewById(R.id.fieldValorDaEntrada);
+
+        Bundle bundle = new Bundle();
+
+        bundle.putString("valorDoBem", valordoBem.getText().toString());
+        bundle.putString("valordaEntrada", valordoBem.getText().toString());
+
+        intent.putExtras(bundle);
+
+        startActivity(intent);
     }
 }
