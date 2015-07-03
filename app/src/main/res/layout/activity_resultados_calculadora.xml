@@ -128,15 +128,10 @@
 
     <Button
         android:id="@+id/btNovoCalculo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignEnd="@+id/resultadosCalculadoraParcelaFinal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/resultadosCalculadoraParcelaFinal"
-        android:layout_below="@+id/resultadosCalculadoraParcelaFinal"
-        android:layout_marginTop="44dp"
-        android:text="Novo Cálculo" />
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="420dp"
+          android:text="Novo Cálculo" />
 
     <ImageView
         android:layout_width="wrap_content"
