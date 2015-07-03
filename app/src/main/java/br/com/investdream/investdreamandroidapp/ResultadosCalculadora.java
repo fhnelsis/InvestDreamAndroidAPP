@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 import br.com.investdream.investdreamandroidapp.R;
 
 
@@ -34,51 +38,46 @@ public class ResultadosCalculadora extends Activity {
         try {
             Bundle bundle = getIntent().getExtras();
 
-//            Double valorDoBem = Double.parseDouble(bundle.getString(valorDoBem));
-            Double valorEntradaPaga = Double.parseDouble(bundle.getString("valorEntragaPaga"));
+            Double valorDoBem = Double.parseDouble(bundle.getString("valorDoBem"));
+            Double valorEntradaPaga = Double.parseDouble(bundle.getString("valordaEntrada"));
 
-//            Double upgrade = valorDoBem * 1.25;
-//            Double valorDoTitulo = (upgrade * 2);
-//            Double valorDaParcela = (upgrade / 60);
-//            Double saldoAPagar = (valorDoTitulo - valorEntradaPaga);
-//            Double valorDaParcelaFinal = (saldoAPagar / 90);
+            Double upgrade = (valorDoBem * 1.25);
+            Double valorDoTitulo = (upgrade * 2);
+            Double valorDaParcela = (upgrade / 60);
+            Double saldoAPagar = (valorDoTitulo - valorEntradaPaga);
+            Double valorDaParcelaFinal = (saldoAPagar / 90);
+
+            round(valorDaParcela, 2);
+            Math.ceil(valorDaParcela);
 
             String StringValorEntradaPaga = valorEntradaPaga.toString();
-//            String StringUpgrade = upgrade.toString();
-//            String StringValorDoTitulo = valorDoTitulo.toString();
-//            String StringValorDaParcela = valorDaParcela.toString();
-//            String StringSaldoAPagar = saldoAPagar.toString();
-//            String StringValorDaParcelaFinal = valorDaParcelaFinal.toString();
+            String StringUpgrade = upgrade.toString();
+            String StringValorDoTitulo = valorDoTitulo.toString();
+            String StringValorDaParcela = valorDaParcela.toString();
+            String StringSaldoAPagar = saldoAPagar.toString();
+            String StringValorDaParcelaFinal = valorDaParcelaFinal.toString();
 
             TextView txtViewValorEntradaPaga = (TextView) findViewById(R.id.resultadosCalculadoraValueValorEntradaPaga);
             txtViewValorEntradaPaga.setText(StringValorEntradaPaga);
 
-//            TextView txtViewUpgrade = (TextView) findViewById(R.id.resultadosCalculadoraValueUp);
-//            txtViewUpgrade.setText(StringUpgrade);
-//
-//            TextView txtViewValorDoTitulo = (TextView) findViewById(R.id.resultadosCalculadoraValueValorDoTitulo);
-//            txtViewValorDoTitulo.setText(StringValorDoTitulo);
-//
-//            TextView txtViewValorDaParcela = (TextView) findViewById(R.id.resultadosCalculadoraValueValorParcela);
-//            txtViewValorDaParcela.setText(StringValorDaParcela);
-//
-//            TextView txtViewSaldoAPagar = (TextView) findViewById(R.id.resultadosCalculadoraValueSaldoPagar);
-//            txtViewSaldoAPagar.setText(StringSaldoAPagar);
-//
-//            TextView txtViewValorDaParcelaFinal = (TextView) findViewById(R.id.resultadosCalculadoraValueParcelaFinal);
-//            txtViewValorDaParcelaFinal.setText(StringValorDaParcelaFinal);
+            TextView txtViewUpgrade = (TextView) findViewById(R.id.resultadosCalculadoraValueUp);
+            txtViewUpgrade.setText(StringUpgrade);
+
+            TextView txtViewValorDoTitulo = (TextView) findViewById(R.id.resultadosCalculadoraValueValorDoTitulo);
+            txtViewValorDoTitulo.setText(StringValorDoTitulo);
+
+            TextView txtViewValorDaParcela = (TextView) findViewById(R.id.resultadosCalculadoraValueValorParcela);
+            txtViewValorDaParcela.setText(StringValorDaParcela);
+
+            TextView txtViewSaldoAPagar = (TextView) findViewById(R.id.resultadosCalculadoraValueSaldoPagar);
+            txtViewSaldoAPagar.setText(StringSaldoAPagar);
+
+            TextView txtViewValorDaParcelaFinal = (TextView) findViewById(R.id.resultadosCalculadoraValueParcelaFinal);
+            txtViewValorDaParcelaFinal.setText(StringValorDaParcelaFinal);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        Double valorEntradaPaga = getIntent().getDoubleExtra("intentValorEntradaPaga", defaultValue);
-//        Double up = getIntent().getDoubleExtra("intentUp", defaultValue);
-//        Double valorTitulo = getIntent().getDoubleExtra("intentValorTitulo", defaultValue);
-//        Double valorParcela = getIntent().getDoubleExtra("intentValorParcela", defaultValue);
-//        Double saldoPagar = getIntent().getDoubleExtra("intentSaldoPagar", defaultValue);
-//        Double valorParcelaFinal = getIntent().getDoubleExtra("intentValorParcelaFinal", defaultValue);
-
-//TODO Jogar valores que passei de uma activity para a outra nos campos da ResultadosCalculadora.java.
     }
 
     @Override
@@ -106,4 +105,6 @@ public class ResultadosCalculadora extends Activity {
     public void novoCalculo() {
         setContentView(R.layout.activity_calculadora);
     }
+
+
 }

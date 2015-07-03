@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
     }
 
     public void calcular(View view) {
-        Intent intent = new Intent(getBaseContext(), ResultadosCalculadora.class);
+        Intent intent = new Intent(this, ResultadosCalculadora.class);
 
         EditText valordoBem = (EditText) findViewById(R.id.fieldValorDoBem);
         EditText valordaEntrada = (EditText) findViewById(R.id.fieldValorDaEntrada);
@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
         Bundle bundle = new Bundle();
 
         bundle.putString("valorDoBem", valordoBem.getText().toString());
-        bundle.putString("valordaEntrada", valordoBem.getText().toString());
+        bundle.putString("valordaEntrada", valordaEntrada.getText().toString());
 
         intent.putExtras(bundle);
 
