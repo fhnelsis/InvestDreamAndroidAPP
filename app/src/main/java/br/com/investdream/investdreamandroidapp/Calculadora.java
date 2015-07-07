@@ -48,4 +48,21 @@ public class Calculadora extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void calcular(View view) {
+        Intent intent = new Intent(this, ResultadosCalculadora.class);
+
+        EditText valordoBem = (EditText) findViewById(R.id.fieldValorDoBem);
+        EditText valordaEntrada = (EditText) findViewById(R.id.fieldValorDaEntrada);
+
+        Bundle bundle = new Bundle();
+
+        bundle.putString("valorDoBem", valordoBem.getText().toString());
+        bundle.putString("valordaEntrada", valordaEntrada.getText().toString());
+
+        intent.putExtras(bundle);
+
+        startActivity(intent);
+    }
+
 }

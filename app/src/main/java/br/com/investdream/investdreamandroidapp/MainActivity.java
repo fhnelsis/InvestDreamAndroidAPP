@@ -7,8 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-
 
 public class MainActivity extends Activity {
 
@@ -64,19 +62,5 @@ public class MainActivity extends Activity {
         startActivity(telaRegistroDeInteressados);
     }
 
-    public void calcular(View view) {
-        Intent intent = new Intent(this, ResultadosCalculadora.class);
 
-        EditText valordoBem = (EditText) findViewById(R.id.fieldValorDoBem);
-        EditText valordaEntrada = (EditText) findViewById(R.id.fieldValorDaEntrada);
-
-        Bundle bundle = new Bundle();
-
-        bundle.putString("valorDoBem", valordoBem.getText().toString());
-        bundle.putString("valordaEntrada", valordaEntrada.getText().toString());
-
-        intent.putExtras(bundle);
-
-        startActivity(intent);
-    }
 }
