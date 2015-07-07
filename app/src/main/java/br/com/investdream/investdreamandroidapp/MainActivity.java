@@ -1,12 +1,15 @@
 package br.com.investdream.investdreamandroidapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 
@@ -17,6 +20,7 @@ public class MainActivity extends Activity {
 
         Button btCalculadora = (Button) findViewById(R.id.btCalculadora);
         Button btRegistroDeInteressados = (Button) findViewById(R.id.btRegistroDeInteressados);
+        ImageView img = (ImageView) findViewById(R.id.imageView);
 
         btCalculadora.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -27,6 +31,16 @@ public class MainActivity extends Activity {
         btRegistroDeInteressados.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 registroDeInteressados();
+            }
+        });
+
+        img.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://www.investdream.com.br/"));
+                startActivity(intent);
             }
         });
     }

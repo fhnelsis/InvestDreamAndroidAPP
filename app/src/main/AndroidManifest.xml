@@ -18,9 +18,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logoicon"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
         <activity
             android:name=".SplashScreenActivity"
             android:label="@string/title_activity_splash_screen">
@@ -34,7 +34,7 @@
             android:label="@string/app_name" />
         <activity
             android:name=".Calculadora"
-            android:label="@string/title_activity_calculadora"></activity>
+            android:label="@string/title_activity_calculadora" />
         <activity
             android:name=".RegistroDeInteressados"
             android:label="@string/title_activity_registro_de_interessados" />

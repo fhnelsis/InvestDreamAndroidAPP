@@ -19,8 +19,8 @@
 
     <Button
         android:id="@+id/btCalculadora"
-        android:layout_width="450dp"
-        android:layout_height="100dp"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -28,20 +28,29 @@
 
     <Button
         android:id="@+id/btRegistroDeInteressados"
-        android:layout_width="450dp"
-        android:layout_height="100dp"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
         android:layout_alignLeft="@+id/btCalculadora"
         android:layout_alignStart="@+id/btCalculadora"
         android:layout_below="@+id/btCalculadora"
         android:text="Registro de Interessados" />
 
+    <Button
+        android:id="@+id/btContato"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/btCalculadora"
+        android:layout_alignStart="@+id/btCalculadora"
+        android:layout_below="@+id/btRegistroDeInteressados"
+        android:text="Contato" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/logosplash" />
 
 
