@@ -17,14 +17,6 @@ public class Calculadora extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
-
-//TODO Implementar listeners funcionais para os botões.
-//        Button btCalcular = (Button) findViewById(R.id.btCalcular);
-//        btCalcular.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-//                calcular(view);
-//            }
-//        });
     }
 
     @Override

@@ -1,7 +1,6 @@
 package br.com.investdream.investdreamandroidapp;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,19 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.text.DecimalFormat;
-import java.math.*;
 
-import br.com.investdream.investdreamandroidapp.R;
-
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class ResultadosCalculadora extends Activity {
 
     Double defaultValue = 0.0;
+    private NumberFormat currencyFormat = DecimalFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,33 +43,33 @@ public class ResultadosCalculadora extends Activity {
             Double saldoAPagar = (valorDoTitulo - valorEntradaPaga);
             Double valorDaParcelaFinal = (saldoAPagar / 90);
 
-            Math.ceil(valorDaParcela);
-            //TODO Arredondar os valores retornados de "Valor da Parcela" e de "Valor de Parcela Final".
+            valorDaParcela = Math.ceil(valorDaParcela);
+            valorDaParcelaFinal = Math.ceil(valorDaParcelaFinal);
 
-            String StringValorEntradaPaga = valorEntradaPaga.toString();
-            String StringUpgrade = upgrade.toString();
-            String StringValorDoTitulo = valorDoTitulo.toString();
-            String StringValorDaParcela = valorDaParcela.toString();
-            String StringSaldoAPagar = saldoAPagar.toString();
-            String StringValorDaParcelaFinal = valorDaParcelaFinal.toString();
+            String stringValorEntradaPaga = currencyFormat.format(valorEntradaPaga);
+            String stringUpgrade = currencyFormat.format(upgrade);
+            String stringValorDoTitulo = currencyFormat.format(valorDoTitulo);
+            String stringValorDaParcela = currencyFormat.format(valorDaParcela);
+            String stringSaldoAPagar = currencyFormat.format(saldoAPagar);
+            String stringValorDaParcelaFinal = currencyFormat.format(valorDaParcelaFinal);
 
             TextView txtViewValorEntradaPaga = (TextView) findViewById(R.id.resultadosCalculadoraValueValorEntradaPaga);
-            txtViewValorEntradaPaga.setText(StringValorEntradaPaga);
+            txtViewValorEntradaPaga.setText(stringValorEntradaPaga);
 
             TextView txtViewUpgrade = (TextView) findViewById(R.id.resultadosCalculadoraValueUp);
-            txtViewUpgrade.setText(StringUpgrade);
+            txtViewUpgrade.setText(stringUpgrade);
 
             TextView txtViewValorDoTitulo = (TextView) findViewById(R.id.resultadosCalculadoraValueValorDoTitulo);
-            txtViewValorDoTitulo.setText(StringValorDoTitulo);
+            txtViewValorDoTitulo.setText(stringValorDoTitulo);
 
             TextView txtViewValorDaParcela = (TextView) findViewById(R.id.resultadosCalculadoraValueValorParcela);
-            txtViewValorDaParcela.setText(StringValorDaParcela);
+            txtViewValorDaParcela.setText(stringValorDaParcela);
 
             TextView txtViewSaldoAPagar = (TextView) findViewById(R.id.resultadosCalculadoraValueSaldoPagar);
-            txtViewSaldoAPagar.setText(StringSaldoAPagar);
+            txtViewSaldoAPagar.setText(stringSaldoAPagar);
 
             TextView txtViewValorDaParcelaFinal = (TextView) findViewById(R.id.resultadosCalculadoraValueParcelaFinal);
-            txtViewValorDaParcelaFinal.setText(StringValorDaParcelaFinal);
+            txtViewValorDaParcelaFinal.setText(stringValorDaParcelaFinal);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -103,7 +98,7 @@ public class ResultadosCalculadora extends Activity {
     }
 
     public void novoCalculo() {
-        setContentView(R.layout.activity_calculadora);
+        finishActivity(0);
     }
 
 
