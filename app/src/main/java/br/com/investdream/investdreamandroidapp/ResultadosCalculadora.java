@@ -14,6 +14,7 @@ import org.w3c.dom.Text;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.math.*;
 
 import br.com.investdream.investdreamandroidapp.R;
 
@@ -47,8 +48,8 @@ public class ResultadosCalculadora extends Activity {
             Double saldoAPagar = (valorDoTitulo - valorEntradaPaga);
             Double valorDaParcelaFinal = (saldoAPagar / 90);
 
-            round(valorDaParcela, 2);
             Math.ceil(valorDaParcela);
+            //TODO Arredondar os valores retornados de "Valor da Parcela" e de "Valor de Parcela Final".
 
             String StringValorEntradaPaga = valorEntradaPaga.toString();
             String StringUpgrade = upgrade.toString();
@@ -98,7 +99,6 @@ public class ResultadosCalculadora extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 

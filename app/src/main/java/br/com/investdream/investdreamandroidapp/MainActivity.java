@@ -22,13 +22,13 @@ public class MainActivity extends Activity {
 
         btCalculadora.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                exibirCalculadora();
+                calculadora();
             }
         });
 
         btRegistroDeInteressados.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                exibirRegistroDeInteressados();
+                registroDeInteressados();
             }
         });
     }
@@ -54,12 +54,14 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void exibirCalculadora() {
-        setContentView(R.layout.activity_calculadora);
+    public void calculadora() {
+        Intent telaCalculadora = new Intent(MainActivity.this, Calculadora.class);
+        startActivity(telaCalculadora);
     }
 
-    public void exibirRegistroDeInteressados() {
-        setContentView(R.layout.activity_registro_de_interessados);
+    public void registroDeInteressados() {
+        Intent telaRegistroDeInteressados = new Intent(MainActivity.this, RegistroDeInteressados.class);
+        startActivity(telaRegistroDeInteressados);
     }
 
     public void calcular(View view) {

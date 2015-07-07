@@ -14,8 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Menu Invest Dream"
-        android:textSize="30dp" />
+        android:text="Invest Dream"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btCalculadora"
@@ -23,7 +23,7 @@
         android:layout_height="100dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:text="Calculadora de Contratos" />
 
     <Button
@@ -38,8 +38,8 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/logosplash" />
