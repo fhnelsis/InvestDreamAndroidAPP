@@ -2,6 +2,7 @@ package br.com.investdream.investdreamandroidapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -42,9 +43,6 @@ public class ResultadosCalculadora extends Activity {
             Double valorDaParcela = (upgrade / 60);
             Double saldoAPagar = (valorDoTitulo - valorEntradaPaga);
             Double valorDaParcelaFinal = (saldoAPagar / 90);
-
-            valorDaParcela = Math.ceil(valorDaParcela);
-            valorDaParcelaFinal = Math.ceil(valorDaParcelaFinal);
 
             String stringValorEntradaPaga = currencyFormat.format(valorEntradaPaga);
             String stringUpgrade = currencyFormat.format(upgrade);
@@ -100,6 +98,4 @@ public class ResultadosCalculadora extends Activity {
     public void novoCalculo() {
         finishActivity(0);
     }
-
-
 }
