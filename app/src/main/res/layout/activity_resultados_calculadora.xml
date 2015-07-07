@@ -9,20 +9,10 @@
     tools:context="br.com.investdream.investdreamandroidapp.ResultadosCalculadora">
 
     <TextView
-        android:id="@+id/title_calculadora"
-        style="@style/Base.TextAppearance.AppCompat.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/tituloResultadosCalculadora"
-        android:textSize="25dp" />
-
-    <TextView
         android:id="@+id/resultadosCalculadoraValorEntradaPaga"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:text="@string/resultadosCalculadoraCampoValorEntradaPaga"
         android:textSize="20dp" />
 
@@ -30,7 +20,7 @@
         android:id="@+id/resultadosCalculadoraUp"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="70dp"
         android:text="@string/resultadosCalculadoraCampoUp"
         android:textSize="20dp" />
 
@@ -38,7 +28,7 @@
         android:id="@+id/resultadosCalculadoraValorTitulo"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="120dp"
         android:text="@string/resultadosCalculadoraCampoValorTitulo"
         android:textSize="20dp" />
 
@@ -46,7 +36,7 @@
         android:id="@+id/resultadosCalculadoraValorParcela"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="170dp"
         android:text="@string/resultadosCalculadoraCampoValorParcela"
         android:textSize="20dp" />
 
@@ -54,7 +44,7 @@
         android:id="@+id/resultadosCalculadoraSaldoPagar"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="220dp"
         android:text="@string/resultadosCalculadoraCampoSaldoPagar"
         android:textSize="20dp" />
 
@@ -62,7 +52,7 @@
         android:id="@+id/resultadosCalculadoraParcelaFinal"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="270dp"
         android:text="@string/resultadosCalculadoraCampoValorParcelaFinal"
         android:textSize="20dp" />
 

@@ -6,8 +6,8 @@
 
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="title_activity_calculadora">Calculadora</string>
-    <string name="title_activity_registro_de_interessados">RegistroDeInteressados</string>
-    <string name="title_activity_resultados_calculadora">ResultadosCalculadora</string>
+    <string name="title_activity_registro_de_interessados">Registro de Interessados</string>
+    <string name="title_activity_resultados_calculadora">Resultados da Calculadora</string>
 
     <string name="tituloCalculadora">Calculadora de Contratos</string>
     <string name="tituloResultadosCalculadora">Resultados do Cálculo</string>
@@ -25,6 +25,18 @@
     <string name="resultadosCalculadoraValueValorParcela">Valor da Parcela</string>
     <string name="resultadosCalculadoraValueSaldoPagar">Saldo a Pagar</string>
     <string name="resultadosCalculadoraValueValorParcelaFinal">Valor da Parcela Final</string>
+
+    <string name="registroInteressadosCampoNome">Nome:</string>
+    <string name="registroInteressadosCampoTelefone">Telefone:</string>
+    <string name="registroInteressadosCampoEmail">E-mail:</string>
+    <string name="registroInteressadosCampoBemDeInteresse">Bem de Interesse:</string>
+
+    <string name="registroInteressadosValueNome">Nome:</string>
+    <string name="registroInteressadosValueTelefone">Telefone:</string>
+    <string name="registroInteressadosValueEmail">E-mail::</string>
+    <string name="registroInteressadosValueBemDeInteresse">Bem de Interesse:</string>
+
+
 
     <string name="hello_world">Hello world!</string>
 

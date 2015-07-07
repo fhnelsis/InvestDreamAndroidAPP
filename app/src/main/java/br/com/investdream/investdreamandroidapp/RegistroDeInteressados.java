@@ -1,9 +1,14 @@
 package br.com.investdream.investdreamandroidapp;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import br.com.investdream.investdreamandroidapp.R;
 
@@ -14,6 +19,15 @@ public class RegistroDeInteressados extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_de_interessados);
+
+        Button btRegistrarInteresse = (Button) findViewById(R.id.btRegistrarInteresse);
+        btRegistrarInteresse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                registrarInteresse();
+            }
+        });
+
     }
 
     @Override
@@ -36,5 +50,37 @@ public class RegistroDeInteressados extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void registrarInteresse() {
+        Intent intent = new Intent(this, RegistrarInteresse.class);
+
+        EditText nome = (EditText) findViewById(R.id.fieldNome);
+        EditText telefone = (EditText) findViewById(R.id.fieldTelefone);
+        EditText enderecoEmail = (EditText) findViewById(R.id.fieldEmail);
+        EditText bemDeInteresse = (EditText) findViewById(R.id.fieldBemDeInteresse);
+
+
+
+
+
+        String to = "contato@investdream.com.br";
+        String subject = "Temos um Novo Registro de Interesse!";
+        String message = "Prezado(a) vendedor," +
+                "Temos um novo registro de interesse criado via aplicativo móvel!" +
+                "Favor contatar o interessado com os dados abaixo:" +
+                "Nome: "+nome +
+                "Telefone: " +telefone+
+                "E-mail: "+enderecoEmail +
+                "Bem de Interesse: "+bemDeInteresse;
+        Intent email = new Intent(Intent.ACTION_SEND);
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{ to});
+        email.setData(Uri.parse("mailto:"));
+        email.putExtra(Intent.EXTRA_SUBJECT, subject);
+        email.putExtra(Intent.EXTRA_TEXT, message);
+        email.setType("text/plain");
+        startActivity(Intent.createChooser(email, "E-mail"));
+
+
     }
 }
