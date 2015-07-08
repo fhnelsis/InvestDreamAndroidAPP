@@ -78,7 +78,7 @@ public class RegistroDeInteressados extends Activity {
         email.setData(Uri.parse("mailto:"));
         email.putExtra(Intent.EXTRA_SUBJECT, subject);
         email.putExtra(Intent.EXTRA_TEXT, message);
-        email.setType("text/plain");
+        email.setType("text/rfc822");
         startActivity(Intent.createChooser(email, "E-mail"));
 
 

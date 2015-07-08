@@ -42,7 +42,8 @@
         android:layout_alignLeft="@+id/btCalculadora"
         android:layout_alignStart="@+id/btCalculadora"
         android:layout_below="@+id/btRegistroDeInteressados"
-        android:text="Contato" />
+        android:enabled="false"
+        android:text="Contato (Em breve...)" />
 
     <ImageView
         android:id="@+id/imageView"

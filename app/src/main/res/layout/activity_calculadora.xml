@@ -9,7 +9,7 @@
     tools:context="br.com.investdream.investdreamandroidapp.Calculadora">
 
     <TextView
-        android:id="@+id/title_calculadora"
+        android:id="@+id/title"
         style="@style/Base.TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +22,6 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/title_calculadora"
         android:orientation="vertical">
 
         <TextView
@@ -41,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:digits="0123456789"
-            android:hint="Insira o valor somente com pontuação de centavos."
+            android:hint="Insira somente números, sem pontuação."
             android:inputType="numberDecimal"
             android:maxLength="14" />
 
@@ -72,11 +71,10 @@
             android:layout_marginTop="70dp"
             android:clickable="true"
             android:enabled="true"
+            android:onClick="calcular"
             android:text="Calcular"
             android:textAlignment="center"
-            android:textStyle="bold"
-            android:onClick="calcular"
-            />
+            android:textStyle="bold" />
 
     </LinearLayout>
 </RelativeLayout>
