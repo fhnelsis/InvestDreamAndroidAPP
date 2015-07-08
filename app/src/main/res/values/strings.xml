@@ -5,7 +5,7 @@
     <string name="action_about">Sobre</string>
 
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
-    <string name="title_activity_calculadora">Calculadora</string>
+    <string name="title_activity_calculadora">Calculadora de Contratos</string>
     <string name="title_activity_registro_de_interessados">Registro de Interessados</string>
     <string name="title_activity_resultados_calculadora">Resultados da Calculadora</string>
 
@@ -36,9 +36,146 @@
     <string name="registroInteressadosValueEmail">E-mail:</string>
     <string name="registroInteressadosValueBemDeInteresse">Bem de Interesse:</string>
 
-
-
-    <string name="hello_world">Hello world!</string>
-
+    <string name="emailContatoInvestDream">contato@investdream.com.br</string>
+    <string name="assuntoContatoInvestDream">Novo Registro de Interesse!</string>
+    <string name="corpoContatoInvestDream">Seguem dados do novo registro de Interesse recebido via aplicativo móvel Invest Dream:</string>
+    <string-array name="bensDeInteresseArray">
+        <item>Audi A1</item>
+        <item>Audi A3</item>
+        <item>Audi A4</item>
+        <item>Audi A5</item>
+        <item>Audi A6</item>
+        <item>Audi A7</item>
+        <item>Audi A8</item>
+        <item>Audi Q3</item>
+        <item>Audi Q5</item>
+        <item>Audi Q7</item>
+        <item>Audi R8</item>
+        <item>Audi TT</item>
+        <item>BMW M3</item>
+        <item>BMW M4</item>
+        <item>BMW M5</item>
+        <item>BMW M6</item>
+        <item>BMW Série 1</item>
+        <item>BMW Série 2</item>
+        <item>BMW Série 3</item>
+        <item>BMW Série 4</item>
+        <item>BMW Série 5</item>
+        <item>BMW Série 6</item>
+        <item>BMW Série 7</item>
+        <item>BMW Série X1</item>
+        <item>BMW Série X3</item>
+        <item>BMW Série X4</item>
+        <item>BMW Série X5</item>
+        <item>BMW Série X6</item>
+        <item>BMW Z4</item>
+        <item>Chery Celer</item>
+        <item>Chery Celer Hatch</item>
+        <item>Chery Celer Sedan</item>
+        <item>Chery New QQ</item>
+        <item>Chery Tiggo</item>
+        <item>Chevrolet Camaro</item>
+        <item>Chevrolet Captiva</item>
+        <item>Chevrolet Celta</item>
+        <item>Chevrolet Classic</item>
+        <item>Chevrolet Cobalt</item>
+        <item>Chevrolet Cruze</item>
+        <item>Chevrolet Montana</item>
+        <item>Chevrolet Onix</item>
+        <item>Chevrolet Prisma</item>
+        <item>Chevrolet S10</item>
+        <item>Chevrolet Spin</item>
+        <item>Chevrolet Tracker</item>
+        <item>Chevrolet Trailblazer</item>
+        <item>Citroën AirCross</item>
+        <item>Citroën AirCross Salomon</item>
+        <item>Citroën C3</item>
+        <item>Citroën C3 Picasso</item>
+        <item>Citroën C4 Lounge</item>
+        <item>Citroën DS 3</item>
+        <item>Citroën DS 4</item>
+        <item>Fiat 500</item>
+        <item>Fiat Bravo</item>
+        <item>Fiat Doblò</item>
+        <item>Fiat Freemont</item>
+        <item>Fiat Gran Siena</item>
+        <item>Fiat Idea</item>
+        <item>Fiat Linea</item>
+        <item>Fiat Mille</item>
+        <item>Fiat Palio Fire</item>
+        <item>Fiat Palio Weekend</item>
+        <item>Fiat Punto</item>
+        <item>Fiat Siena</item>
+        <item>Fiat Strada</item>
+        <item>Fiat Uno</item>
+        <item>Ford Ecosport</item>
+        <item>Ford Edge</item>
+        <item>Ford Focus Hatch</item>
+        <item>Ford Focus Sedan</item>
+        <item>Ford Fusion</item>
+        <item>Ford KA+</item>
+        <item>Ford Ka</item>
+        <item>Ford New Fiesta</item>
+        <item>Ford New Fiesta Hatch</item>
+        <item>Ford Ranger</item>
+        <item>Honda Accord</item>
+        <item>Honda CR-V</item>
+        <item>Honda City</item>
+        <item>Honda Civic</item>
+        <item>Honda Fit</item>
+        <item>Honda HR-V</item>
+        <item>Hyundai Azera</item>
+        <item>Hyundai Elantra</item>
+        <item>Hyundai Grand Santa Fe</item>
+        <item>Hyundai HB20</item>
+        <item>Hyundai HB20S</item>
+        <item>Hyundai HB20X</item>
+        <item>Hyundai Santa Fe</item>
+        <item>Hyundai Tucson</item>
+        <item>Hyundai i30</item>
+        <item>Hyundai ix35</item>
+        <item>Jeep Cherokee</item>
+        <item>Jeep Compass</item>
+        <item>Jeep Grand Cherokee</item>
+        <item>Jeep Renegade</item>
+        <item>Jeep Wrangler</item>
+        <item>Mitsubishi ASX</item>
+        <item>Mitsubishi L200</item>
+        <item>Mitsubishi Lancer</item>
+        <item>Mitsubishi Outlander</item>
+        <item>Mitsubishi Pajero</item>
+        <item>Nissan Frontier</item>
+        <item>Nissan Grand Livina</item>
+        <item>Nissan Livina</item>
+        <item>Nissan March</item>
+        <item>Nissan Sentra</item>
+        <item>Nissan Versa</item>
+        <item>Nissan X-Gear</item>
+        <item>Peugeot 2008</item>
+        <item>Peugeot 207</item>
+        <item>Peugeot 207 Passion</item>
+        <item>Peugeot 208</item>
+        <item>Peugeot 3008</item>
+        <item>Peugeot 308</item>
+        <item>Peugeot Hoggar</item>
+        <item>Renault Clio</item>
+        <item>Renault Duster</item>
+        <item>Renault Logan</item>
+        <item>Renault Sandero</item>
+        <item>Suzuki Jimny</item>
+        <item>Toyota Corolla</item>
+        <item>Toyota Etios</item>
+        <item>Toyota Etios Sedan</item>
+        <item>Volkswagen CrossFox</item>
+        <item>Volkswagen Fox</item>
+        <item>Volkswagen Gol</item>
+        <item>Volkswagen Golf</item>
+        <item>Volkswagen Polo</item>
+        <item>Volkswagen Polo</item>
+        <item>Volkswagen Saveiro</item>
+        <item>Volkswagen UP</item>
+        <item>Volkswagen Voyage</item>
+        <item>Outro...</item>
+    </string-array>
 
 </resources>

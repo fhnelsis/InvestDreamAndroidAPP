@@ -8,15 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.investdream.investdreamandroidapp.Calculadora">
 
-    <TextView
-        android:id="@+id/title"
-        style="@style/Base.TextAppearance.AppCompat.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/tituloCalculadora"
-        android:textSize="25dp" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="0dp"
             android:text="Valor do Bem"
             android:textSize="20dp" />
 
@@ -40,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:digits="0123456789"
-            android:hint="Insira somente números, sem pontuação."
+            android:hint="Insira somente números."
             android:inputType="numberDecimal"
             android:maxLength="14" />
 
@@ -50,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:text="Valor da Entrada"
             android:textSize="20dp" />
 
@@ -60,15 +51,36 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:digits="0123456789"
-            android:hint="Insira o valor somente com pontuação de centavos."
+            android:hint="Insira somente números."
             android:inputType="numberDecimal"
             android:maxLength="14" />
+
+        <TextView
+            android:id="@+id/labelQuantidadeDeParcelas"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="Quantidade de Parcelas"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/fieldQuantidadeDeParcelas"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:digits="0123456789"
+            android:hint="Quantidade de parcelas. (Em Breve...)"
+            android:inputType="numberDecimal"
+            android:maxLength="14"
+            android:enabled="false"/>
 
         <Button
             android:id="@+id/btCalcular"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="100dp"
             android:clickable="true"
             android:enabled="true"
             android:onClick="calcular"

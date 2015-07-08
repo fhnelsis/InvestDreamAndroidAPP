@@ -1,6 +1,7 @@
 package br.com.investdream.investdreamandroidapp;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,11 +10,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import br.com.investdream.investdreamandroidapp.R;
+import android.widget.Toast;
 
 
 public class RegistroDeInteressados extends Activity {
+
+    private EditText nomeInteressado;
+    private EditText telefoneInteressado;
+    private EditText emailInteressado;
+    private EditText bemDeInteresseInteressado;
+    private EditText destinatarioInvestDream;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +27,11 @@ public class RegistroDeInteressados extends Activity {
         setContentView(R.layout.activity_registro_de_interessados);
 
         Button btRegistrarInteresse = (Button) findViewById(R.id.btRegistrarInteresse);
+
         btRegistrarInteresse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registrarInteresse();
+                envioDeEmailRegistrarInteresse();
             }
         });
 
@@ -52,35 +59,25 @@ public class RegistroDeInteressados extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void registrarInteresse() {
-        Intent intent = new Intent(this, RegistrarInteresse.class);
+    public void envioDeEmailRegistrarInteresse() {
+//TODO Implementar o envio de e-mails de registro de interessados.
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("plain/text");
+        intent.putExtra(Intent.EXTRA_SUBJECT, R.string.assuntoContatoInvestDream);
+        intent.putExtra(Intent.EXTRA_TEXT, R.string.corpoContatoInvestDream);
+        intent.putExtra(Intent.EXTRA_EMAIL, R.string.emailContatoInvestDream);
+        startActivity(Intent.createChooser(intent, "Escolha o aplicativo para envio do e-mail..."));
 
-        EditText nome = (EditText) findViewById(R.id.fieldNome);
-        EditText telefone = (EditText) findViewById(R.id.fieldTelefone);
-        EditText enderecoEmail = (EditText) findViewById(R.id.fieldEmail);
-        EditText bemDeInteresse = (EditText) findViewById(R.id.fieldBemDeInteresse);
+        telefoneInteressado = (EditText) findViewById(R.id.fieldTelefoneInteressado);
+        emailInteressado = (EditText) findViewById(R.id.fieldEmailInteressado);
+        bemDeInteresseInteressado = (EditText) findViewById(R.id.fieldBemDeInteresseInteressado);
 
-
-
-
-
-        String to = "contato@investdream.com.br";
-        String subject = "Temos um Novo Registro de Interesse!";
-        String message = "Prezado(a) vendedor," +
-                "Temos um novo registro de interesse criado via aplicativo móvel!" +
-                "Favor contatar o interessado com os dados abaixo:" +
-                "Nome: "+nome +
-                "Telefone: " +telefone+
-                "E-mail: "+enderecoEmail +
-                "Bem de Interesse: "+bemDeInteresse;
-        Intent email = new Intent(Intent.ACTION_SEND);
-        email.putExtra(Intent.EXTRA_EMAIL, new String[]{ to});
-        email.setData(Uri.parse("mailto:"));
-        email.putExtra(Intent.EXTRA_SUBJECT, subject);
-        email.putExtra(Intent.EXTRA_TEXT, message);
-        email.setType("text/rfc822");
-        startActivity(Intent.createChooser(email, "E-mail"));
-
+        Bundle bundle = new Bundle();
+        bundle.putString("nomeInteressado", nomeInteressado.getText().toString());
+        bundle.putString("telefoneInteressado", telefoneInteressado.getText().toString());
+        bundle.putString("emailInteressado", emailInteressado.getText().toString());
+        bundle.putString("bemDeInteresseInteressado", bemDeInteresseInteressado.getText().toString());
+        intent.putExtras(bundle);
 
     }
 }
