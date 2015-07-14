@@ -44,8 +44,6 @@ public class Calculadora extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-
-
     public void addListenerBtCalcular() {
         btCalcular = (Button) findViewById(R.id.btCalcular);
 
@@ -70,13 +68,10 @@ public class Calculadora extends Activity {
 
         Bundle bundle = new Bundle();
 
-        //TODO Resolver as strings das spinners que entram no bundle errado.
         bundle.putString("valorDoCarro", valorDoCarro.getText().toString().replace("R$", "").replaceAll("\\.", "").replace(",", "."));
         bundle.putString("StringSpinnerPercentualDeEntrada", StringSpinnerPercentualDeEntrada);
         bundle.putString("StringSpinnerClasse", StringSpinnerClasse);
         intent.putExtras(bundle);
         startActivity(intent);
     }
-
-
 }
