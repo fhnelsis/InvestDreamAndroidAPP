@@ -86,7 +86,7 @@ public class ResultadosCalculadora extends Activity {
             String stringSaldoAPagar = currencyFormat.format(saldoAPagar);
             String stringValorDaParcelaFinal = currencyFormat.format(valorParcela);
 
-            TextView txtViewValorDoCarro = (TextView) findViewById(R.id.resultadosCalculadoraValorDoCarro);
+            TextView txtViewValorDoCarro = (TextView) findViewById(R.id.resultadosCalculadoraValueValorDoCarro);
             txtViewValorDoCarro.setText(stringValorDoCarro);
 
             TextView txtViewValorEntradaPaga = (TextView) findViewById(R.id.resultadosCalculadoraValueValorEntradaPaga);

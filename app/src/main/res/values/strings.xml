@@ -19,6 +19,7 @@
     <string name="resultadosCalculadoraCampoSaldoPagar">Saldo a Pagar</string>
     <string name="resultadosCalculadoraCampoValorParcelaFinal">Valor da Parcela</string>
 
+    <string name="resultadosCalculadoraValorDoCarro">Valor do Carro</string>
     <string name="resultadosCalculadoraValueValorEntradaPaga">Valor da Entrada</string>
     <string name="resultadosCalculadoraValueUp">Upgrade</string>
     <string name="resultadosCalculadoraValueValorTitulo">Valor do Título</string>
