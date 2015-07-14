@@ -9,18 +9,37 @@
     tools:context="br.com.investdream.investdreamandroidapp.ResultadosCalculadora">
 
     <TextView
-        android:id="@+id/resultadosCalculadoraValorEntradaPaga"
-        android:layout_width="170dp"
+        android:id="@+id/resultadosCalculadoraValorDoCarro"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:text="Valor do Carro"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraValorEntradaPaga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultadosCalculadoraValorDoCarro"
+        android:layout_marginTop="20dp"
         android:text="@string/resultadosCalculadoraCampoValorEntradaPaga"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/resultadosCalculadoraClasse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultadosCalculadoraValorEntradaPaga"
+        android:layout_marginTop="20dp"
+        android:text="Classe"
         android:textSize="20dp" />
 
     <TextView
         android:id="@+id/resultadosCalculadoraUp"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_below="@+id/resultadosCalculadoraClasse"
+        android:layout_marginTop="20dp"
         android:text="@string/resultadosCalculadoraCampoUp"
         android:textSize="20dp" />
 
@@ -28,7 +47,8 @@
         android:id="@+id/resultadosCalculadoraValorTitulo"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_below="@+id/resultadosCalculadoraUp"
+        android:layout_marginTop="20dp"
         android:text="@string/resultadosCalculadoraCampoValorTitulo"
         android:textSize="20dp" />
 
@@ -36,7 +56,8 @@
         android:id="@+id/resultadosCalculadoraValorParcela"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="170dp"
+        android:layout_below="@+id/resultadosCalculadoraValorTitulo"
+        android:layout_marginTop="20dp"
         android:text="@string/resultadosCalculadoraCampoValorParcela"
         android:textSize="20dp" />
 
@@ -44,7 +65,8 @@
         android:id="@+id/resultadosCalculadoraSaldoPagar"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_below="@+id/resultadosCalculadoraValorParcela"
+        android:layout_marginTop="20dp"
         android:text="@string/resultadosCalculadoraCampoSaldoPagar"
         android:textSize="20dp" />
 
@@ -52,8 +74,17 @@
         android:id="@+id/resultadosCalculadoraParcelaFinal"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
+        android:layout_below="@+id/resultadosCalculadoraSaldoPagar"
+        android:layout_marginTop="20dp"
         android:text="@string/resultadosCalculadoraCampoValorParcelaFinal"
+        android:textSize="20dp" />
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/resultadosCalculadoraValorDoCarro"
+        android:layout_marginLeft="170dp"
         android:textSize="20dp" />
 
     <TextView
@@ -121,7 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:layout_marginTop="420dp"
-          android:text="Novo Cálculo" />
+        android:text="Novo Cálculo" />
 
     <ImageView
         android:layout_width="wrap_content"
