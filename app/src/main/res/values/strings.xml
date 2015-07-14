@@ -39,6 +39,31 @@
     <string name="emailContatoInvestDream">contato@investdream.com.br</string>
     <string name="assuntoContatoInvestDream">Novo Registro de Interesse!</string>
     <string name="corpoContatoInvestDream">Seguem dados do novo registro de Interesse recebido via aplicativo móvel Invest Dream:</string>
+
+    <string-array name="percentual_entrada">
+        <item>50%</item>
+        <item>45%</item>
+        <item>40%</item>
+        <item>35%</item>
+        <item>30%</item>
+        <item>25%</item>
+        <item>20%</item>
+        <item>15%</item>
+        <item>10%</item>
+    </string-array>
+
+    <string-array name="classe">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+    </string-array>
+
     <string-array name="bensDeInteresseArray">
         <item>Audi A1</item>
         <item>Audi A3</item>

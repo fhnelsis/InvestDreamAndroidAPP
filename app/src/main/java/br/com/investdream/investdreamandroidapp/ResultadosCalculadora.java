@@ -43,7 +43,9 @@ public class ResultadosCalculadora extends Activity {
             Double valorDaParcela = (upgrade / 60);
             Double saldoAPagar = (valorDoTitulo - valorEntradaPaga);
             Double valorDaParcelaFinal = (saldoAPagar / 90);
-
+            // Sempre 6 parcelas = 10%
+                    //9 parcela = 15%
+            //saldo a pagar = (valor do titulo - entrada)/90
             String stringValorEntradaPaga = currencyFormat.format(valorEntradaPaga);
             String stringUpgrade = currencyFormat.format(upgrade);
             String stringValorDoTitulo = currencyFormat.format(valorDoTitulo);

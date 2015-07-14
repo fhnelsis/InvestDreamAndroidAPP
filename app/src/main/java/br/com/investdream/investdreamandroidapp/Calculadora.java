@@ -5,19 +5,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class Calculadora extends Activity {
+
+    private Spinner spinner;
+    private Button btCalcular;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +32,12 @@ public class Calculadora extends Activity {
         final EditText maskedValorDoBem = (EditText) findViewById(R.id.fieldValorDoBem);
         maskedValorDoBem.addTextChangedListener(new MascaraMonetaria(maskedValorDoBem));
 
-        final EditText maskedValorDaEntrada = (EditText) findViewById(R.id.fieldValorDaEntrada);
-        maskedValorDaEntrada.addTextChangedListener(new MascaraMonetaria(maskedValorDaEntrada));
+//        final EditText maskedValorDaEntrada = (EditText) findViewById(R.id.spinnerPercentualDeEntrada);
+//        maskedValorDaEntrada.addTextChangedListener(new MascaraMonetaria(maskedValorDaEntrada));
+
+        addItemsOnSpinner();
+        addListenerOnButton();
+        addListenerOnSpinnerItemSelection();
     }
 
     @Override
@@ -53,11 +62,52 @@ public class Calculadora extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void addItemsOnSpinner() {
+
+        spinner = (Spinner) findViewById(R.id.spinnerPercentualDeEntrada);
+        List<String> list = new ArrayList<String>();
+        list.add("list 1");
+        list.add("list 2");
+        list.add("list 3");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, list);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(dataAdapter);
+    }
+
+    public void addListenerOnSpinnerItemSelection() {
+        spinner = (Spinner) findViewById(R.id.spinnerPercentualDeEntrada);
+        spinner.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+    }
+
+    // get the selected dropdown list value
+    public void addListenerOnButton() {
+
+        spinner = (Spinner) findViewById(R.id.spinnerPercentualDeEntrada);
+
+        btCalcular = (Button) findViewById(R.id.btCalcular);
+
+        btCalcular.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(Calculadora.this,
+                        "OnClickListener : " +
+                                "\nSpinner 2 : " + String.valueOf(spinner.getSelectedItem()),
+                        Toast.LENGTH_SHORT).show();
+            }
+
+        });
+    }
+
     public void calcular(View view) {
         Intent intent = new Intent(this, ResultadosCalculadora.class);
 
+
+
         EditText valordoBem = (EditText) findViewById(R.id.fieldValorDoBem);
-        EditText valordaEntrada = (EditText) findViewById(R.id.fieldValorDaEntrada);
+        EditText valordaEntrada = (EditText) findViewById(R.id.spinnerPercentualDeEntrada);
 
         Bundle bundle = new Bundle();
         bundle.putString("valorDoBem", valordoBem.getText().toString().replace("R$", "").replaceAll("\\.", "").replace(",", "."));

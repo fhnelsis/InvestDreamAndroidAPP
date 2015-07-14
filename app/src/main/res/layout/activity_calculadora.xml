@@ -21,13 +21,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="20dp"
             android:text="Valor do Bem"
             android:textSize="20dp" />
 
         <EditText
             android:id="@+id/fieldValorDoBem"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:digits="0123456789"
@@ -36,45 +36,43 @@
             android:maxLength="14" />
 
         <TextView
-            android:id="@+id/labelValorDaEntrada"
+            android:id="@+id/labelPercentualDeEntrada"
             style="@style/Base.TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:text="Valor da Entrada"
+            android:text="Percentual de Entrada"
             android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/fieldValorDaEntrada"
-            android:layout_width="300dp"
+
+        <Spinner
+            android:id="@+id/spinnerPercentualDeEntrada"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:digits="0123456789"
-            android:hint="Insira somente números."
-            android:inputType="numberDecimal"
-            android:maxLength="14" />
+            android:entries="@array/percentual_entrada"
+            android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/labelQuantidadeDeParcelas"
+            android:id="@+id/labelClasse"
             style="@style/Base.TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:text="Quantidade de Parcelas"
+            android:layout_marginTop="20dp"
+            android:text="Classe"
             android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/fieldQuantidadeDeParcelas"
-            android:layout_width="300dp"
+        <Spinner
+            android:id="@+id/fieldClasse"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:digits="0123456789"
-            android:hint="Quantidade de parcelas. (Em Breve...)"
-            android:inputType="numberDecimal"
-            android:maxLength="14"
-            android:enabled="false"/>
+            android:entries="@array/classe"
+            android:maxLength="14" />
 
         <Button
             android:id="@+id/btCalcular"
