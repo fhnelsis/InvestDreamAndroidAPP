@@ -19,16 +19,17 @@
 
     <Button
         android:id="@+id/btCalculadora"
-        android:layout_width="400dp"
+        android:layout_width="fill_parent"
         android:layout_height="70dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="Calculadora de Contratos" />
+        android:text="Calculadora de Contratos"
+        />
 
     <Button
         android:id="@+id/btRegistroDeInteressados"
-        android:layout_width="400dp"
+        android:layout_width="fill_parent"
         android:layout_height="70dp"
         android:layout_alignLeft="@+id/btCalculadora"
         android:layout_alignStart="@+id/btCalculadora"
@@ -37,13 +38,20 @@
 
     <Button
         android:id="@+id/btContato"
-        android:layout_width="400dp"
+        android:layout_width="fill_parent"
         android:layout_height="70dp"
         android:layout_alignLeft="@+id/btCalculadora"
         android:layout_alignStart="@+id/btCalculadora"
         android:layout_below="@+id/btRegistroDeInteressados"
         android:enabled="false"
-        android:text="Contato (Em breve...)" />
+        android:text="Contato" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/btContato"
+        android:text="Localize uma Revenda"
+        android:enabled="false"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -53,6 +61,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:src="@drawable/logosplash" />
-
 
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package br.com.investdream.investdreamandroidapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -8,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.text.DecimalFormat;
 
@@ -24,9 +27,7 @@ public class ResultadosCalculadora extends Activity {
         setContentView(R.layout.activity_resultados_calculadora);
 
         Button novoCalculo = (Button) findViewById(R.id.btNovoCalculo);
-
-        Double valorEntradaPaga = 0.0;
-
+        Double valorEntrada = 0.0;
         novoCalculo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 novoCalculo();
@@ -35,76 +36,102 @@ public class ResultadosCalculadora extends Activity {
 
         try {
             Bundle bundle = getIntent().getExtras();
+            Double valorReferencia = Double.parseDouble(bundle.getString("valorCarro"));
+            Double valorCarro = Double.parseDouble(bundle.getString("valorCarro"));
+            String StringSpinnerPercentualEntrada = bundle.getString("StringSpinnerPercentualEntrada");
+            String StringSpinnerClasse = bundle.getString("StringSpinnerClasse");
 
-            Double valorDoCarro = Double.parseDouble(bundle.getString("valorDoCarro"));
-            String StringSpinnerPercentualDeEntrada = bundle.getString("StringSpinnerPercentualDeEntrada");
-            //String StringSpinnerClasse = bundle.getString("StringSpinnerClasse");
-
-            switch (StringSpinnerPercentualDeEntrada) {
-                case "50%":
-                    valorEntradaPaga = valorDoCarro * 0.5;
+            switch (StringSpinnerClasse) {
+                case "A - 0km":
                     break;
-                case "45%":
-                    valorEntradaPaga = valorDoCarro * 0.45;
+                case "B - 6 meses":
+                    valorCarro = valorReferencia * 0.95;
                     break;
-                case "40%":
-                    valorEntradaPaga = valorDoCarro * 0.4;
+                case "C - 12 meses":
+                    valorCarro = valorReferencia * 0.90;
                     break;
-                case "35%":
-                    valorEntradaPaga = valorDoCarro * 0.35;
+                case "D - 18 meses":
+                    valorCarro = valorReferencia * 0.85;
                     break;
-                case "30%":
-                    valorEntradaPaga = valorDoCarro * 0.3;
+                case "E - 24 meses":
+                    valorCarro = valorReferencia * 0.80;
                     break;
-                case "25%":
-                    valorEntradaPaga = valorDoCarro * 0.25;
+                case "F - 30 meses":
+                    valorCarro = valorReferencia * 0.75;
                     break;
-                case "20%":
-                    valorEntradaPaga = valorDoCarro * 0.2;
+                case "G - 36 meses":
+                    valorCarro = valorReferencia * 0.70;
                     break;
-                case "15%":
-                    valorEntradaPaga = valorDoCarro * 0.15;
+                case "H - 42 meses":
+                    valorCarro = valorReferencia * 0.65;
                     break;
-                case "10%":
-                    valorEntradaPaga = valorDoCarro * 0.1;
+                case "I - 48 meses":
+                    valorCarro = valorReferencia * 0.60;
                     break;
             }
 
-            Double upgrade = (valorDoCarro * 1.25);
-            Double valorDoTitulo = (upgrade * 2);
-            Double saldoAPagar = (valorDoTitulo - valorEntradaPaga);
+            switch (StringSpinnerPercentualEntrada) {
+                case "50%":
+                    valorEntrada = valorCarro * 0.5;
+                    break;
+                case "45%":
+                    valorEntrada = valorCarro * 0.45;
+                    break;
+                case "40%":
+                    valorEntrada = valorCarro * 0.4;
+                    break;
+                case "35%":
+                    valorEntrada = valorCarro * 0.35;
+                    break;
+                case "30%":
+                    valorEntrada = valorCarro * 0.3;
+                    break;
+                case "25%":
+                    valorEntrada = valorCarro * 0.25;
+                    break;
+                case "20%":
+                    valorEntrada = valorCarro * 0.2;
+                    break;
+                case "15%":
+                    valorEntrada = valorCarro * 0.15;
+                    break;
+                case "10%":
+                    valorEntrada = valorCarro * 0.1;
+                    break;
+            }
+
+            Double valorTitulo = (valorCarro * 2);
+            Double saldoAPagar = (valorTitulo - valorEntrada);
             Double valorParcela = (saldoAPagar / 90);
 
             // Parcelas sempre de 3 em 3. Cada 6 parcelas = 10% / 9 parcela = 15%
 
-            String stringValorDoCarro = currencyFormat.format(valorDoCarro);
-            String stringValorEntradaPaga = currencyFormat.format(valorEntradaPaga);
-            String stringUpgrade = currencyFormat.format(upgrade);
-            String stringValorDoTitulo = currencyFormat.format(valorDoTitulo);
-            String stringValorDaParcela = currencyFormat.format(valorParcela);
-            String stringSaldoAPagar = currencyFormat.format(saldoAPagar);
-            String stringValorDaParcelaFinal = currencyFormat.format(valorParcela);
+            String stringValorReferencia = currencyFormat.format(valorReferencia);
+            String stringValorCarro = currencyFormat.format(valorCarro);
+            String stringValorEntrada = currencyFormat.format(valorEntrada);
+            String stringValorTitulo = currencyFormat.format(valorTitulo);
+            String stringValorParcela = currencyFormat.format(valorParcela);
 
-            TextView txtViewValorDoCarro = (TextView) findViewById(R.id.resultadosCalculadoraValueValorDoCarro);
-            txtViewValorDoCarro.setText(stringValorDoCarro);
+            TextView txtViewValorReferencia = (TextView) findViewById(R.id.resultadosCalculadoraValueValorReferencia);
+            txtViewValorReferencia.setText(stringValorReferencia);
 
-            TextView txtViewValorEntradaPaga = (TextView) findViewById(R.id.resultadosCalculadoraValueValorEntradaPaga);
-            txtViewValorEntradaPaga.setText(stringValorEntradaPaga);
+            TextView txtViewPercentualEntrada = (TextView) findViewById(R.id.resultadosCalculadoraValuePercentualEntrada);
+            txtViewPercentualEntrada.setText(StringSpinnerPercentualEntrada);
 
-            TextView txtViewUpgrade = (TextView) findViewById(R.id.resultadosCalculadoraValueUp);
-            txtViewUpgrade.setText(stringUpgrade);
+            TextView txtViewValorCarro = (TextView) findViewById(R.id.resultadosCalculadoraValueValorDoCarro);
+            txtViewValorCarro.setText(stringValorCarro);
 
-            TextView txtViewValorDoTitulo = (TextView) findViewById(R.id.resultadosCalculadoraValueValorDoTitulo);
-            txtViewValorDoTitulo.setText(stringValorDoTitulo);
+            TextView txtViewValorEntrada = (TextView) findViewById(R.id.resultadosCalculadoraValueValorEntrada);
+            txtViewValorEntrada.setText(stringValorEntrada);
 
-            TextView txtViewValorDaParcela = (TextView) findViewById(R.id.resultadosCalculadoraValueValorParcela);
-            txtViewValorDaParcela.setText(stringValorDaParcela);
+            TextView txtViewClasse = (TextView) findViewById(R.id.resultadosCalculadoraValueClasse);
+            txtViewClasse.setText(StringSpinnerClasse);
 
-            TextView txtViewSaldoAPagar = (TextView) findViewById(R.id.resultadosCalculadoraValueSaldoPagar);
-            txtViewSaldoAPagar.setText(stringSaldoAPagar);
+            TextView txtViewValorTitulo = (TextView) findViewById(R.id.resultadosCalculadoraValueValorContrato);
+            txtViewValorTitulo.setText(stringValorTitulo);
 
-            TextView txtViewValorDaParcelaFinal = (TextView) findViewById(R.id.resultadosCalculadoraValueParcelaFinal);
-            txtViewValorDaParcelaFinal.setText(stringValorDaParcelaFinal);
+            TextView txtViewValorParcela = (TextView) findViewById(R.id.resultadosCalculadoraValueParcela);
+            txtViewValorParcela.setText(stringValorParcela);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -120,15 +147,13 @@ public class ResultadosCalculadora extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
     public void novoCalculo() {
-        finishActivity(0);
+        super.onBackPressed();
     }
 }

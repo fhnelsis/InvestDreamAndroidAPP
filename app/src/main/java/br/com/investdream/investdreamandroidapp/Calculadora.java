@@ -12,7 +12,7 @@ import android.widget.Spinner;
 
 public class Calculadora extends Activity {
 
-    private Spinner spinnerPercentualDeEntrada;
+    private Spinner spinnerPercentualEntrada;
     private Spinner spinnerClasse;
     private Button btCalcular;
 
@@ -20,10 +20,8 @@ public class Calculadora extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
-
-        final EditText maskedValorDoBem = (EditText) findViewById(R.id.fieldValorDoBem);
-        maskedValorDoBem.addTextChangedListener(new MascaraMonetaria(maskedValorDoBem));
-
+        final EditText maskedValorCarro = (EditText) findViewById(R.id.fieldValorCarro);
+        maskedValorCarro.addTextChangedListener(new MascaraMonetaria(maskedValorCarro));
         addListenerBtCalcular();
     }
 
@@ -36,17 +34,14 @@ public class Calculadora extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     public void addListenerBtCalcular() {
         btCalcular = (Button) findViewById(R.id.btCalcular);
-
         btCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,18 +53,18 @@ public class Calculadora extends Activity {
     public void calcular(View view) {
         Intent intent = new Intent(this, ResultadosCalculadora.class);
 
-        EditText valorDoCarro = (EditText) findViewById(R.id.fieldValorDoBem);
+        EditText valorCarro = (EditText) findViewById(R.id.fieldValorCarro);
 
-        spinnerPercentualDeEntrada = (Spinner) findViewById(R.id.spinnerPercentualDeEntrada);
-        String StringSpinnerPercentualDeEntrada = spinnerPercentualDeEntrada.getSelectedItem().toString();
+        spinnerPercentualEntrada = (Spinner) findViewById(R.id.spinnerPercentualDeEntrada);
+        String StringSpinnerPercentualEntrada = spinnerPercentualEntrada.getSelectedItem().toString();
 
         spinnerClasse = (Spinner) findViewById(R.id.spinnerClasse);
         String StringSpinnerClasse = spinnerClasse.getSelectedItem().toString();
 
         Bundle bundle = new Bundle();
 
-        bundle.putString("valorDoCarro", valorDoCarro.getText().toString().replace("R$", "").replaceAll("\\.", "").replace(",", "."));
-        bundle.putString("StringSpinnerPercentualDeEntrada", StringSpinnerPercentualDeEntrada);
+        bundle.putString("valorCarro", valorCarro.getText().toString().replace("R$", "").replaceAll("\\.", "").replace(",", "."));
+        bundle.putString("StringSpinnerPercentualEntrada", StringSpinnerPercentualEntrada);
         bundle.putString("StringSpinnerClasse", StringSpinnerClasse);
         intent.putExtras(bundle);
         startActivity(intent);

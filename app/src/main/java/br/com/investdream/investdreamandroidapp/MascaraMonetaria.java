@@ -19,13 +19,12 @@ public class MascaraMonetaria implements TextWatcher {
     }
 
     private boolean isUpdating = false;
-    // Pega a formatacao do sistema, se for brasil R$ se EUA US$
+    // Pega a formatacao do sistema, se for brasil R$
     private NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int after) {
-        // Evita que o método seja executado varias vezes.
-        // Se tirar ele entre em loop
+        // Evita que o método seja executado varias vezes. Se tirar ele entre em loop.
         if (isUpdating) {
             isUpdating = false;
             return;
@@ -34,14 +33,13 @@ public class MascaraMonetaria implements TextWatcher {
         String str = s.toString();
         // Verifica se já existe a máscara no texto.
         boolean hasMask = ((str.indexOf("R$") > -1 || str.indexOf("$") > -1) && (str.indexOf(".") > -1 || str.indexOf(",") > -1));
-        // Verificamos se existe máscara
+        // Verifica se existe máscara
         if (hasMask) {
-            // Retiramos a máscara.
+            // Retira a máscara.
             str = str.replaceAll("[R$]", "").replaceAll("[,]", "").replaceAll("[.]", "");
         }
         try {
-            // Transformamos o número que está escrito no EditText em
-            // monetário.
+            // Transforma o número que está escrito no EditText em monetário.
             str = nf.format(Double.parseDouble(str) / 100);
             campo.setText(str);
             campo.setSelection(campo.getText().length());
@@ -52,11 +50,9 @@ public class MascaraMonetaria implements TextWatcher {
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        // Não utilizado
     }
 
     @Override
     public void afterTextChanged(Editable s) {
-        // Não utilizado
     }
 }

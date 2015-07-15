@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Invest Dream</string>
 
-    <string name="action_settings">Configurações</string>
     <string name="action_about">Sobre</string>
 
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
@@ -12,20 +11,21 @@
     <string name="tituloCalculadora">Calculadora de Contratos</string>
     <string name="tituloResultadosCalculadora">Resultados do Cálculo</string>
 
-    <string name="resultadosCalculadoraCampoValorEntradaPaga">Valor da Entrada</string>
-    <string name="resultadosCalculadoraCampoUp">Upgrade</string>
-    <string name="resultadosCalculadoraCampoValorTitulo">Valor do Título</string>
-    <string name="resultadosCalculadoraCampoValorParcela">Valor da Parcela</string>
-    <string name="resultadosCalculadoraCampoSaldoPagar">Saldo a Pagar</string>
-    <string name="resultadosCalculadoraCampoValorParcelaFinal">Valor da Parcela</string>
+    <string name="resultadosCalculadoraLabelValorDeReferencia">Valor de Referência</string>
+    <string name="resultadosCalculadoraLabelPercentualDeEntrada">Percentual de Entrada</string>
+    <string name="resultadosCalculadoraLabelClasse">Classe</string>
+    <string name="resultadosCalculadoraLabelValorDoVeiculo">Valor do Veículo</string>
+    <string name="resultadosCalculadoraLabelValorEntrada">Valor da Entrada</string>
+    <string name="resultadosCalculadoraLabelValorContrato">Valor do Contrato</string>
+    <string name="resultadosCalculadoraLabelValorDaPrestacao">Valor da Prestação</string>
 
-    <string name="resultadosCalculadoraValorDoCarro">Valor do Carro</string>
+    <string name="resultadosCalculadoraValueReferencia">Valor de Referência</string>
+    <string name="resultadosCalculadoraValueCarro">Valor do Carro</string>
     <string name="resultadosCalculadoraValueValorEntradaPaga">Valor da Entrada</string>
-    <string name="resultadosCalculadoraValueUp">Upgrade</string>
-    <string name="resultadosCalculadoraValueValorTitulo">Valor do Título</string>
+    <string name="resultadosCalculadoraValueValorContrato">Valor do Contrato</string>
     <string name="resultadosCalculadoraValueValorParcela">Valor da Parcela</string>
     <string name="resultadosCalculadoraValueSaldoPagar">Saldo a Pagar</string>
-    <string name="resultadosCalculadoraValueValorParcelaFinal">Valor da Parcela Final</string>
+    <string name="resultadosCalculadoraValueValorPrestacao">Valor da Prestação</string>
 
     <string name="registroInteressadosCampoNome">Nome:</string>
     <string name="registroInteressadosCampoTelefone">Telefone:</string>
@@ -55,14 +55,14 @@
 
     <string-array name="classe">
         <item>A - 0km</item>
-        <item>B - 6 meses de uso</item>
-        <item>C - 12 meses de uso</item>
-        <item>D - 24 meses de uso</item>
-        <item>E - 36 meses de uso</item>
-        <item>F - 48 meses de uso</item>
-        <item>G - 60 meses de uso</item>
-        <item>H - 72 meses de uso</item>
-        <item>I - 84 meses de uso</item>
+        <item>B - 6 meses</item>
+        <item>C - 12 meses</item>
+        <item>D - 18 meses</item>
+        <item>E - 24 meses</item>
+        <item>F - 30 meses</item>
+        <item>G - 36 meses</item>
+        <item>H - 42 meses</item>
+        <item>I - 48 meses</item>
     </string-array>
 
     <string-array name="bensDeInteresseArray">
